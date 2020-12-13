@@ -28,6 +28,9 @@
 @import "../../scss/variables";
 @import "../../scss/mixins";
 
+// Custom docs components
+@import "user";
+
 // Load docs components
 @import "variables";
 @import "nav";

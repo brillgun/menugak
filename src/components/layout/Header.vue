@@ -14,7 +14,7 @@
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-button variant="light" class="mr-2" v-b-toggle.sidebar-left>
+          <b-button variant="light" class="mr-2" v-b-toggle.sidebar-no-header>
             <b-icon icon="list" aria-hidden="true"></b-icon>
             전체메뉴
           </b-button>
@@ -25,7 +25,7 @@
 
           <b-button pill variant="warning" to="/order">
             <b-icon icon="cart-check-fill" variant="" aria-hidden="true"></b-icon>
-            주문내역
+            주문내역 <b-badge variant="primary" pill>4</b-badge>
           </b-button>
         </b-navbar-nav>
       </b-collapse>
