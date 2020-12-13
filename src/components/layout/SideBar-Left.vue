@@ -4,8 +4,8 @@
       <template #default="{ hide }">
         <div class="p-3">
             <b-list-group v-for="item in categoryList" v-bind:key="item.viewOrder" class="mb-1">
-              <b-list-group-item class="d-flex justify-content-between align-items-center" @click="hide" button>
-                {{item.categoryNm}}
+              <b-list-group-item class="d-flex justify-content-between align-items-center" :to="'/home/' + item.categoryNmEng">
+                {{item.categoryNmKor}}
                 <b-badge variant="primary" pill>{{item.menuCount}}</b-badge>
               </b-list-group-item>
             </b-list-group>
@@ -22,8 +22,8 @@ export default {
   data () {
     return {
       categoryList: [
-        { viewOrder: 0, categoryNm: '김밥류', menuCount: 3 },
-        { viewOrder: 0, categoryNm: '분식류', menuCount: 5 }
+        { viewOrder: 0, categoryNmKor: '김밥류', categoryNmEng: 'kimbab', menuCount: 3 },
+        { viewOrder: 0, categoryNmKor: '분식류', categoryNmEng: 'boonsik', menuCount: 5 }
 
       ]
     }

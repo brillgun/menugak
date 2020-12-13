@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="success">
-      <b-navbar-brand to="/home">
+      <b-navbar-brand to="/home/kimbab">
         <img src="./../../assets/logo.svg" alt="logo" width="32" height="32" class="d-inline-block align-top mr-1"/>
 <!--        <img src="src/assets/logo.svg" class="d-inline-block align-top mr-1" alt="Kitten">-->
         <span>메뉴각</span>

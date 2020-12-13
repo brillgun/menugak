@@ -16,7 +16,7 @@
       <h1 class="total-calc">총 30,000원</h1>
       <div class="btn-area">
           <b-button class="big-btn" to="/home">뒤로가기</b-button>
-          <b-button class="big-btn ml-2" variant="primary">결제</b-button>
+          <b-button class="big-btn ml-2" variant="success" to="/pay">결 제</b-button>
       </div>
   </div>
 </template>
@@ -68,6 +68,8 @@ export default {
   }
   .big-btn{
     width: 50%;
-    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 24px;
   }
 </style>
