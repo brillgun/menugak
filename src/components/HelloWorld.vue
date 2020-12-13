@@ -1,56 +1,9 @@
 <template>
-  <div>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="4000"
-      controls
-      indicators
-      background="#eee"
-      img-width="1920"
-      img-height="1080"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <!-- Text slides with image -->
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="https://img1.daumcdn.net/thumb/R720x0.q80/?scode=mtistory2&fname=http%3A%2F%2Fcfile6.uf.tistory.com%2Fimage%2F99C6A6335E3E03272450B6"
-      ></b-carousel-slide>
-
-      <!-- Slides with custom text -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=54">
-        <h1>Hello world!</h1>
-      </b-carousel-slide>
-
-      <!-- Slides with image only -->
-      <b-carousel-slide img-src="https://picsum.photos/1024/480/?image=58"></b-carousel-slide>
-
-      <!-- Slides with img slot -->
-      <!-- Note the classes .d-block and .img-fluid to prevent browser default image alignment -->
-      <b-carousel-slide>
-        <template #img>
-          <img
-            class="d-block img-fluid w-100"
-            width="1920"
-            height="1080"
-            src="https://picsum.photos/1024/480/?image=55"
-            alt="image slot"
-          >
-        </template>
-      </b-carousel-slide>
-
-      <!-- Slide with blank fluid image to maintain slide aspect ratio -->
-      <b-carousel-slide caption="Blank Image" img-blank img-alt="Blank image">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eros felis, tincidunt
-          a tincidunt eget, convallis vel est. Ut pellentesque ut lacus vel interdum.
-        </p>
-      </b-carousel-slide>
-    </b-carousel>
-    <b-button variant="outline-primary" to="/home" class="mt-4">입장</b-button>
+  <div class="content">
+    <a>
+    <b-button variant="outline-light" to="/home" class="mt-4 button">메뉴각 입장</b-button>
+    </a>
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zFXIZtLGeSA?controls=0" allowfullscreen allow="autoplay"></iframe>
   </div>
 </template>
 
@@ -59,21 +12,41 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      slide: 0,
-      sliding: null
+      mainProps: { blank: true, class: '' }
     }
   },
   methods: {
-    onSlideStart (slide) {
-      this.sliding = true
-    },
-    onSlideEnd (slide) {
-      this.sliding = false
-    }
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .content{
+    position: relative;
+  }
+  a{
+    display: block;
+    position: relative;
+    width: 300px;
+    margin: 300px auto;
+  }
+  .button{
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    line-height: 60px;
+    z-index: 1;
+  }
+  iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Preserve aspet ratio */
+    min-width: 100%;
+    min-height: 100%;
+  }
 </style>
