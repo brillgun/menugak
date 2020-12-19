@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="success">
-      <b-navbar-brand to="/home/kimbab">
+      <b-navbar-brand to="/home">
         <img src="./../../assets/logo.svg" alt="logo" width="32" height="32" class="d-inline-block align-top mr-1"/>
 <!--        <img src="src/assets/logo.svg" class="d-inline-block align-top mr-1" alt="Kitten">-->
         <span>메뉴각</span>
@@ -10,7 +10,7 @@
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-nav-text>메뉴명은 여기에 표기</b-nav-text>
+        <b-nav-text>메뉴명은 여기에 표기{{$route.params.category}}</b-nav-text>
 
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
@@ -36,6 +36,7 @@
 <script>
 export default {
   name: 'Header',
+  props: ['category'],
   data () {
     return {
     }

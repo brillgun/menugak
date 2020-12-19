@@ -13,7 +13,7 @@
               img-height="300"
             >
               <b-card-title>
-                <span>김밥 3,000 원</span>
+                <span>카테고리</span>
                 <b-button href="#" variant="success" class="float-right d-inline-block align-top mr-1">+담기</b-button>
               </b-card-title>
 
